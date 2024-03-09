@@ -1,0 +1,110 @@
+# The Deployment spec is very much similar to the one we created in the frontend deployment
+# except that we are using a different image.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: narrati-staging-backend # TODO: Change the name to your application name with a backend suffix
+  namespace: narrati-staging # TODO: Change the namespace to your application name with a staging suffix
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      # TODO: Change the app label to your application name with a backend suffix
+      # Must match the app label in the template field.
+      app: narrati-backend
+  template:
+    metadata:
+      labels:
+        # TODO: Change the app label to your application name with a backend suffix
+        # Must match the app label in the selector field above.
+        app: narrati-backend
+    spec:
+      containers:
+        - name: narrati # TODO: replace this with your application name
+          resources: {}
+          env:
+            - name: MONGO_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: narrati-mongo-secrets
+                  key: mongo-initdb-root-username
+
+            - name: MONGO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: narrati-mongo-secrets
+                  key: mongo-initdb-root-password
+
+            - name: MONGO_HOSTNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: narrati-staging-configmap
+                  key: mongo-host-for-backend
+            - name: MONGO_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: narrati-staging-configmap
+                  key: mongo-port-for-backend
+
+            - name: MONGO_DATABASE_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: narrati-staging-configmap
+                  key: mongo-initdb-database
+
+            - name: REDDIT_USERNAME
+              value: No_Motor4670
+              #valueFrom:
+              #  secretKeyRef:
+              #    name: narrati-backend-secrets
+              #    key: reddit_username
+
+            - name: REDDIT_PASSWORD
+              value: 9ihj85cKafBDhnz
+              #valueFrom:
+              #  secretKeyRef:
+              #    name: narrati-backend-secrets
+              #    key: reddit_password
+
+            - name: CLIENT_SECRET
+              value: kEwrZ1lE7CBG3bO1GrUKBE7w1h7KrA
+              #valueFrom:
+              #  secretKeyRef:
+              #    name: narrati-backend-secrets
+              #    key: client_secret
+
+            - name: CLIENT_ID
+              value: kHJKrExaUX1LVN2X6l2FKQ
+              #valueFrom:
+              #  secretKeyRef:
+              #    name: narrati-backend-secrets
+              #    key: client_id
+
+            - name: RAPID_HOST
+              value: twitter154.p.rapidapi.com
+              #valueFrom:
+              #  secretKeyRef:
+              #    name: narrati-backend-secrets
+              #    key: rapid_host
+
+            - name: RAPID_KEY
+              value: af84b1bf59msh17cad9f3c2f94a4p1586d9jsn4ce6d0296a07
+              #valueFrom:
+              #  secretKeyRef:
+              #    name: narrati-backend-secrets
+              #    key: rapid_key
+
+          ports:
+            - containerPort: 8080
+          image: registry.socs.uoguelph.ca/3760w23/t1/narrati/evehicle/backend:staging
+          imagePullPolicy: Always # Comment out this line if you are running locally
+
+          # image: narrati-be:latest # TODO: replace this with your local image name to run locally or comment it out to run from the registry
+          # imagePullPolicy: Never # Comment out the imagePullPolicy field if you are NOT running locally. Otherwise, set it to Never.
+
+      imagePullSecrets:
+        - name: regcred # TODO: replace this with your image pull secret name
+
+#comment to restart deployment3

@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+  font-family: "Ibm Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Header*/
+.header {
+    overflow: hidden;
+    background-color: #f8f9fa;
+    padding: 25px 20px;
+}
+  
+.header a {
+    float: left;
+    color: #0e0d0d;
+    text-align: center;
+    margin-right: 8px;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #0f0a25;
+}
+
+.header-right a:hover {
+    background-color: #e9e9eb;
+    color: #0e0d0d;
+}
+
+.header-right {
+    float: right;
+}
+
+/*Banner section*/
+.banner {
+    width: 100%;
+    min-height: 70vh;
+    background: linear-gradient(106deg, #54c1e9 43%, #ffb765 86%);
+    margin-bottom: 30px;
+}
+
+.banner-container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.banner-section {
+    float: left;
+    width: 55%;
+    text-align: center;
+}
+
+.banner-title h1 {
+    font-size: 70px;
+    color: #e1f7ff;
+}
+
+.banner-content p {
+    margin: 20px 0 0 0;
+    color: #e1f7ff;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.banner-image {
+    float: right;
+    width: 40%;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+/*Footer*/
+.footer {
+    padding: 40px 0;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.desc2 {
+    color: #212529;
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding: 0;
+    text-align: center;
+}
+
+/*About Section*/
+.about {
+    width: 100%;
+    min-height: 90vh;
+    background-color: #bbdcff;
+}
+
+.about-container {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.content-section {
+    float: left;
+    width: 55%;
+}
+
+.about-title h1 {
+    font-size: 48px;
+    margin: 0 0 30px 0;
+}
+
+.about-content p {
+    margin: 20px 0 0 0;
+    color: #000;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.about-image {
+    float: right;
+    width: 40%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+}
+
+#team-ul {
+    color: #000;
+    font-size: 20px;
+    display: inline;
+}
+
+#ul-team-names {
+    padding: 0;
+}
+
+#ul-team-names li {
+    list-style-type: none;
+    margin: 5px 0;
+}
+
+li i {
+    padding: 0 20px 0 0;
+}

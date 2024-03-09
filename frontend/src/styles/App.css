@@ -1,0 +1,112 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.app {
+  width: 100%;
+  background-color: #fff;
+  margin:0;
+  height: fit-content;
+  overflow-x: hidden;
+}
+
+.boxTitle{
+  position: relative;
+  margin:auto;
+  text-align: center;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.middlebox{
+  position: relative;
+  height: auto;
+  margin: auto;
+  padding: 15px;
+  width: 80%;
+  text-align: center;
+  color: black;
+  top: 10%;
+}
+
+.middlebox h1{
+  margin: auto;
+  top: 50%;
+}
+
+.numberpostsbox{
+  height: 4%;
+  width: 6%;
+  text-align: center;
+  border: 2px solid black;
+  color: black;
+}
+
+.apiChooseBox{
+  height: 4%;
+  width: 6%;
+  text-align: center;
+  border: 2px solid black;
+  color: black;
+}
+
+.dateRangeBox{
+  height: 4%;
+  width: 6%;
+  text-align: center;
+  border: 2px solid black;
+  color: black;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.posts{
+  position:relative;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  height: 100%;
+}
+
+.pie-charts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 14;
+}

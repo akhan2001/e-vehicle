@@ -1,0 +1,53 @@
+.post h1{
+  text-align: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 250px;
+  width: 100%;
+  box-shadow: 0px 12px 23px 0px rgba(0,0,0,0.26);
+}
+
+.post.rpost h1{
+  background-color: #fb8500;
+}
+
+.post.tweet h1{
+  background-color: #00acee;
+}
+
+.post {
+  transition: 0.3s;
+}
+
+.post:hover {
+  transform: scale(1.02);
+}
+
+.post h2{
+  margin: auto;
+  position: relative;
+  text-align: left;
+  bottom: 91px;
+  left: 8px;
+  font-size: 18px;
+}
+
+.post h3{
+  margin: auto;
+  position: relative;
+  text-align: left;
+  bottom: 80px;
+  left: 8px;
+  font-size: 18px;
+}
+
+.post h4{
+  margin: auto;
+  position: relative;
+  text-align: left;
+  bottom: 102px;
+  left: 8px;
+  font-size: 18px;
+}

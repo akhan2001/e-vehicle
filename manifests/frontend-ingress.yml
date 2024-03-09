@@ -1,0 +1,20 @@
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: narrati-staging-frontend-ingress
+  namespace: narrati-staging
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: narrati-staging.socs.uoguelph.ca # TODO: replace this with your application name with a frontend suffix
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: narrati-staging-frontend-service
+                port:
+                  number: 80
+
