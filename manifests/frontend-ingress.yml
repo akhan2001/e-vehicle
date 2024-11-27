@@ -17,4 +17,3 @@ spec:
                 name: narrati-staging-frontend-service
                 port:
                   number: 80
-

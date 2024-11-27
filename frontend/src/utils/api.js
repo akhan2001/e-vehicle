@@ -22,6 +22,7 @@ export async function getDisplayedPosts(afterDate) {
   let posts = [];
   const BASE_URL = getAPIBaseUrl();
 
+
   try {
     const res = await fetch(`${BASE_URL}/posts/${afterDate}`);
     const data = await res.json();
@@ -32,12 +33,9 @@ export async function getDisplayedPosts(afterDate) {
     
   } catch (e) {
     console.error("Unable to fetch posts");
+    console.log("Fetching posts from:", `${BASE_URL}/posts/${afterDate}`);
     console.error(e);
   }
   posts.sort((a, b) => b.numUpvotes - a.numUpvotes);
   return posts;
 }
-
-
-
-

@@ -55,28 +55,28 @@ spec:
                   key: mongo-initdb-database
 
             - name: REDDIT_USERNAME
-              value: No_Motor4670
+              value: SmthInevitable
               #valueFrom:
               #  secretKeyRef:
               #    name: narrati-backend-secrets
               #    key: reddit_username
 
             - name: REDDIT_PASSWORD
-              value: 9ihj85cKafBDhnz
+              value: Starwars123@
               #valueFrom:
               #  secretKeyRef:
               #    name: narrati-backend-secrets
               #    key: reddit_password
 
             - name: CLIENT_SECRET
-              value: kEwrZ1lE7CBG3bO1GrUKBE7w1h7KrA
+              value: mpr_Xw06uxfOMQ2oHap2gAlr7pihkA
               #valueFrom:
               #  secretKeyRef:
               #    name: narrati-backend-secrets
               #    key: client_secret
 
             - name: CLIENT_ID
-              value: kHJKrExaUX1LVN2X6l2FKQ
+              value: Kywm166wP1d0m1p2aZR5aQ
               #valueFrom:
               #  secretKeyRef:
               #    name: narrati-backend-secrets
