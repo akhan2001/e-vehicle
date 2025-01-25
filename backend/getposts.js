@@ -30,7 +30,7 @@ const {
 // eslint-disable-next-line new-cap
 const r = new snoowrap({
   // moved to .env
-  userAgent: 'evehicle',
+  userAgent: 'e-vehicle',
   clientId: CLIENT_ID,
   clientSecret: CLIENT_SECRET,
   username: REDDIT_USERNAME,

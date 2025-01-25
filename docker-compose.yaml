@@ -61,11 +61,11 @@ services:
     # NOTE: Variables defined under environment are not available during the image build process.
     # To use build time environment variables the build.args is the place to define them
     environment:
-      - MONGO_USERNAME=root
-      - MONGO_PASSWORD=example
-      - MONGO_HOSTNAME=host.docker.internal
+      - MONGO_USERNAME=mabdullahkhan567
+      - MONGO_PASSWORD=w4mJ4FH3Xp93ca6
+      - MONGO_HOSTNAME=cluster0
       - MONGO_PORT=27017
-      - MONGO_DATABASE_NAME=task-management
+      - MONGO_DATABASE_NAME=mydatabase
 
     # depends_on expresses dependency between services.
     # NOTE: depends_on does not wait for the service to be "healthy"

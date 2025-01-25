@@ -22,7 +22,6 @@ export async function getDisplayedPosts(afterDate) {
   let posts = [];
   const BASE_URL = getAPIBaseUrl();
 
-
   try {
     const res = await fetch(`${BASE_URL}/posts/${afterDate}`);
     const data = await res.json();
